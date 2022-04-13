@@ -27,11 +27,28 @@ header {
 }
 nav {
     background-color: var(--clr-primary-500);
-    padding: 1.3125rem;
+    padding: .5rem;
 }
-ul {
+.hamburger {
+    background-color: transparent;
+    display: block;
+    border: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.hamburger:focus {
+    outline: none;
+}
+.hamburger > img{
+    width: 40px;
+    height: auto;
+}
+#nav-links {
+    display: none;
+}
+#nav-links.show {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 li {
     list-style-type: none;
@@ -49,14 +66,14 @@ li > a:hover {
 
 /* Main Styles */
 main {
-    height: auto;
+    flex: 1 0 auto;
+    background-color: var(--clr-primary-300);
 }
 .container {
     display: flex;
+    height: auto;
     flex-direction: column;
     padding: 25px;
-    text-align: center;
-    background-color: var(--clr-primary-300);
 }
 .image-container {
     align-self: center;
@@ -65,17 +82,88 @@ main {
     max-width: 200px;
     height: auto;
 }
+.description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#text {
+    width: fit-content;
+}
+#text > h2 {
+    text-align: center;
+}
+.telNum-other {
+    display: none;
+}
+
 
 /* Footer Styles */
 footer {
     flex-shrink: 0;
+    background-color: var(--clr-primary-400);
+    text-align: center;
+    font-size: 1.1rem;
 }
 
-@media (min-width: 800px){
+.social-logos {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Tablet Viewport */
+@media only screen and (min-width: 600px){
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .container {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hamburger {
+        display: none;
+    }
+    #nav-links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .image-container > img {
+        min-width: auto;
+        height: auto;
+    }
+}
+/* Desktop Viewport */
+@media only screen and (min-width: 830px){
+    #nav-links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .hamburger {
+        display: none;
+    }
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image-container {
+        justify-self: center;
     }
     .image-container > img {
         min-width: 400px;
     }
+    .description-section {
+        display: grid;
+    }
+    .telNum-mobile {
+        display: none;
+    }
+    .telNum-other{
+        display: block;
+    }
+    
 }

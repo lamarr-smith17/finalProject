@@ -9,12 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <script src="/finalProject/scripts/scripts.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Personal Website</h1>
         <nav>
-            <ul>
+            <button class="hamburger" id="hamburger">
+                <img src="/finalProject/imgs/Hamburger_icon.svg.png" alt="Hamburger Icon">
+            </button>
+            <ul id="nav-links">
                 <li>
                     <a href="/finalProject/index.html" class="active">Home</a>
                 </li>
@@ -47,8 +51,8 @@
             </div>
 
             <section class="description-section">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-                <div class="text">
+                <div id="text">
+                    <h2>Description</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate tenetur ad facilis quos, voluptatibus a.</p>
                 </div>
             </section>
@@ -56,17 +60,32 @@
     </main>
 
     <footer>
-        &copy; Copyright 2021.  All Rights Reserved. 
+        &copy; Copyright 2022.  All Rights Reserved. 
 		<hr>
-        <div class="telNum">
-            <p>555-555-5555</p>
+        <div class="telNum-mobile">
+            <p>
+                Phone:
+                <a href="tel:+5555555555">(555)-555-5555</a>
+            </p>
+        </div>
+        <div class="telNum-other">
+            <p>
+                Phone:
+                (555)-555-5555
+            </p>
+        </div>
+        <div id="email-container">
+            <p>
+                Email:
+                <a href="mailto:ljsmith19@my.trine.edu">ljsmith19@my.trine.edu</a>
+            </p>
         </div>
         <div class="social-media-links">
             <a href="https://www.linkedin.com/in/lamarr-smith-0017/">
-                <img src="/finalProject/imgs/5296501_linkedin_network_linkedin logo_icon(1).png" alt="LinkedIN Logo">
+                <img src="/finalProject/imgs/5296501_linkedin_network_linkedin logo_icon(1).png" alt="LinkedIN Logo" class="social-logos">
             </a>
             <a href="https://github.com/lamarr-smith17">
-                <img src="/finalProject/imgs/4747499_github_icon.png" alt="Github Logo">
+                <img src="/finalProject/imgs/4747499_github_icon.png" alt="Github Logo" class="social-logos">
             </a>
         </div>
     </footer>
