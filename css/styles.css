@@ -1,11 +1,81 @@
+:root {
+    --clr-primary-300: #68c3d4;
+    --clr-primary-400: #568ea3;
+    --clr-primary-500: #37323e;
+    --clr-accent-100: #deb841;
+    --clr-neutral-100: #FFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 .active{
     color: red;
 }
-a {
-    color: black;
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: var(--clr-primary-400);
+}
+nav {
+    background-color: var(--clr-primary-500);
+    padding: 1.3125rem;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+li {
+    list-style-type: none;
+}
+li > a {
+    color: var(--clr-neutral-100);
+    text-decoration: none;
+    font-size: 1.3125rem;
+    transition: .2s;
+}
+li > a:hover {
+    color: var(--clr-accent-100);
+    transition: .2s;
+}
+
+/* Main Styles */
+main {
+    height: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+    background-color: var(--clr-primary-300);
+}
+.image-container {
+    align-self: center;
+}
+.image-container > img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    flex-shrink: 0;
+}
+
+@media (min-width: 800px){
+    .container {
+        flex-direction: row;
+    }
+    .image-container > img {
+        min-width: 400px;
+    }
 }
