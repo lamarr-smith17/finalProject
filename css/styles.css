@@ -4,6 +4,7 @@
     --clr-primary-500: #37323e;
     --clr-accent-100: #deb841;
     --clr-neutral-100: #FFF;
+    --clr-neutral-200: #000;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -81,6 +82,11 @@ main {
 }
 .image-container {
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .standard-image-size {
     max-width: 200px;
@@ -91,11 +97,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.20rem;
 }
-#text {
+.description-holder {
     width: fit-content;
 }
-#text > h2 {
+.description-holder> h2 {
     text-align: center;
 }
 .img-section {
@@ -105,9 +112,7 @@ main {
     text-align: center;
     gap: 20px;
 }
-.telNum-other {
-    display: none;
-}
+
 
 
 /* Footer Styles */
@@ -115,7 +120,23 @@ footer {
     flex-shrink: 0;
     background-color: var(--clr-primary-400);
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.20rem;
+}
+#tel{
+    color: #000;
+    text-decoration: none;
+}
+.telNum-other {
+    display: none;
+}
+#email {
+    text-decoration: none;
+    color: var(--clr-neutral-200);
+    transition: .2s;
+}
+#email:hover{
+    color: var(--clr-accent-100);
+    transition: .2s;
 }
 
 .social-logos {
@@ -135,6 +156,11 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .img-section {
+        grid-column: 2;
+        display: flex;
+        flex-direction: row;
+    }
     .hamburger {
         display: none;
     }
@@ -142,7 +168,7 @@ footer {
         display: flex;
         justify-content: space-evenly;
     }
-    .image-container > img {
+    .standard-image-size {
         min-width: auto;
         height: auto;
     }
@@ -159,16 +185,23 @@ footer {
     .container {
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, 1fr);
     }
     .image-container {
         justify-self: center;
     }
-    .image-container > img {
+    .standard-image-size {
         min-width: 400px;
     }
+    .tall-heights {
+        height: 400px;
+    }
     .description-section {
-        display: grid;
+        display: flex;
+        gap: 20px;
+    }
+    .img-section{
+        grid-row: 2;
     }
     .telNum-mobile {
         display: none;
