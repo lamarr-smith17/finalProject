@@ -63,6 +63,10 @@ li > a:hover {
     color: var(--clr-accent-100);
     transition: .2s;
 }
+.favorite-things {
+    list-style-type: '-';
+    list-style-position: inside;
+}
 
 /* Main Styles */
 main {
@@ -78,7 +82,7 @@ main {
 .image-container {
     align-self: center;
 }
-.image-container > img {
+.standard-image-size {
     max-width: 200px;
     height: auto;
 }
@@ -93,6 +97,13 @@ main {
 }
 #text > h2 {
     text-align: center;
+}
+.img-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
 }
 .telNum-other {
     display: none;
