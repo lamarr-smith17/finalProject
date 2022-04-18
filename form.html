@@ -44,7 +44,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="form-main">
         <div class="form-container">
             <form method="post" id="main-form">
                 <caption>Contact Form</caption>
@@ -52,14 +52,14 @@
                     <ul id="names-list">
                         <li>
                             <label for="first-name">
-                                <p>First Name</p>
+                                <p class="text-center">First Name</p>
                                 <input type="text" name="fName" id="first-name" required placeholder="John" pattern="[A-Za-z]{1,32}">
                                 <span class="validation"></span>
                             </label>
                         </li>
                         <li>
                             <label for="last-name">
-                                <p>Last Name</p>
+                                <p class="text-center">Last Name</p>
                                 <input type="text" name="lName" id="last-name" required placeholder="Doe" pattern="[A-Za-z]{1,32}">
                                 <span class="validation"></span>
                             </label>
@@ -71,14 +71,14 @@
                     <ul id="email-num">
                         <li>
                             <label for="mail">
-                                <p>Email Address</p>
+                                <p class="text-center">Email Address</p>
                                 <input type="email" name="email" id="mail" required placeholder="johndoe123@youremail.com">
                                 <span class="validation"></span>
                             </label>
                         </li>
                         <li>
                             <label for="telNum">
-                                <p>Phone Number</p>
+                                <p class="text-center">Phone Number</p>
                                 <input type="tel" name="phoneNum" id="telNum" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                                 <span class="validation"></span>
                             </label>
@@ -90,7 +90,7 @@
                     <ul>
                         <li>
                             <label for="state-chk">
-                                <p>Select Your State:</p>
+                                <p class="text-center">Select Your State:</p>
                                 <select id="state-chk">
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
@@ -150,22 +150,24 @@
                 </div>  
 
                 <div class="contact-method">
-                    <label for="contact-chk">
-                        <p>Choose Your Contact Method:</p>
+                    <p class="text-center">Choose Your Contact Method:</p>
                         <ul class="ulFlex">
                             <li>
-                                <input type="checkbox" name="email" id="contact-chk" selected> Email
+                                <label for="contact-chk">
+                                    <input type="checkbox" name="email" id="contact-chk" selected> Email
+                                </label>
                             </li>
                             <li>
-                                <input type="checkbox" name="tel" id="contact-chk"> Text
+                                <label for="text-chk">
+                                    <input type="checkbox" name="tel" id="text-chk"> Text
+                                </label>
                             </li>
                         </ul>
-                    </label>
                 </div>
 
                 <div class="question-area">
                     <label for="question-box">
-                        <p>Questions & Comments:</p>
+                        <p class="text-center">Questions & Comments:</p>
                         <ul>
                             <li>
                                 <textarea name="questions" id="question-box" cols="40" rows="5" placeholder="Enter questions and comments here..."></textarea>
@@ -175,7 +177,7 @@
                 </div>
 
                 <div class="buttons">
-                    <button type="submit" id="submit-btn">Submit</button>
+                    <button type="submit" id="submit-btn">Submit Form</button>
                     <button type="reset" id="reset-btn">Reset Form</button>
                 </div>
             </form>
