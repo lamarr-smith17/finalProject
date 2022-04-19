@@ -1,8 +1,9 @@
 :root {
-    --clr-primary-300: #68c3d4;
-    --clr-primary-400: #568ea3;
+    --clr-primary-250: #15C4BC;
+    --clr-primary-300: #6fb5c1;
+    --clr-primary-400: #E3FBF7;
     --clr-primary-500: #37323e;
-    --clr-accent-100: #deb841;
+    --clr-accent-100: #20E5CD;
     --clr-neutral-100: #FFF;
     --clr-neutral-200: #000;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -19,7 +20,7 @@ body {
     flex-direction: column;
 }
 .active{
-    color: red;
+    color: var(--clr-primary-250);
 }
 /* Header Styles */
 header {
@@ -185,7 +186,11 @@ button {
     height: 25px;
     width: 100px;
 }
-
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
 
 /* Footer Styles */
 footer {
