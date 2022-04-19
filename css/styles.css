@@ -171,6 +171,7 @@ input[type="tel"]{
     height: 22px;
     text-indent: 5px;
 }
+
 textarea {
     border: none;
     text-indent: 5px;
@@ -224,17 +225,30 @@ footer {
         align-items: center;
         height: 100%;
     }
+    #center-tablet {
+        justify-content: center;
+    }
     .container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
     }
     .image-container{
         display: flex;
         flex-direction: row;
     }
+    .tablet-container {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+    }
     #span-2-food {
         grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .desktop-text {
+        text-align: center;
     }
    #header-gallery {
        grid-column: span 2;
@@ -256,6 +270,12 @@ footer {
     .hamburger {
         display: none;
     }
+    .telNum-mobile {
+        display: none;
+    }
+    .telNum-other{
+        display: block;
+    }
     #nav-links {
         display: flex;
         justify-content: space-evenly;
@@ -268,6 +288,7 @@ footer {
         width: 200px;
         height: auto;
     }
+   
     #video {
         width: 500px;
         height: 400px;
@@ -275,10 +296,47 @@ footer {
     #form-main {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        padding-top: 25px;
+        align-items: center;
     }
-
+    #main-form {
+        font-size: 1.5rem;
+        padding-bottom: 35px;
+    }
+    input[type="text"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        text-indent: 5px;
+        font-size: medium;
+    }
+    input[type="email"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        text-indent: 5px;
+        font-size: medium;
+    }
+    input[type="tel"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        font-size: medium;
+        text-indent: 5px;
+    }
+    textarea{
+        font-size: large;
+    }
+    #state-chk {
+        height: 30px;
+        width: 200px;
+    }
+    button {
+        height: 30px;
+        width: 100px;
+    }
 }
 /* Desktop Viewport */
 @media only screen and (min-width: 830px){
@@ -288,6 +346,9 @@ footer {
     }
     .hamburger {
         display: none;
+    }
+    #center-main {
+        justify-content: center;
     }
     .container {
         display: grid;
@@ -325,6 +386,39 @@ footer {
         font-size: 1.3125rem;
     }
     #form-main {
-        padding-top: 10px
+        padding-top: 40px
+    }
+    #main-form {
+        font-size: 1.5rem;
+    }
+    input[type="text"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        text-indent: 5px;
+        font-size: large;
+    }
+    input[type="email"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        text-indent: 5px;
+        font-size: medium;
+    }
+    input[type="tel"]{
+        border-radius: 30px;
+        border: none;
+        height: 25px;
+        width: 200px;
+        font-size: large;
+        text-indent: 5px;
+    }
+    #state-chk {
+        width: 200px;
+    }
+    textarea{
+        font-size: large;
     }
 }
