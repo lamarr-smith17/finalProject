@@ -73,6 +73,11 @@ li > a:hover {
 h2{
     text-align: center;
 }
+#header-img {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
 
 /* Main Styles */
 main {
